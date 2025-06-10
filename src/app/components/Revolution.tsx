@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Leaf, RectangleGoggles, Tractor } from "lucide-react";
+import { ArrowRightIcon, Leaf, RectangleGoggles, Tractor } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Revolution = () => {
@@ -47,9 +47,10 @@ const Revolution = () => {
               variant="link"
               className="text-blue-600 p-0 hover:text-blue-800 !rounded-button whitespace-nowrap"
             >
-              Learn more <i className="fas fa-arrow-right ml-2"></i>
+              Learn more <ArrowRightIcon />
             </Button>
           </motion.div>
+
           <motion.div
             initial={{
               opacity: 0,
@@ -60,7 +61,6 @@ const Revolution = () => {
               y: 0,
             }}
             viewport={{
-       
               once: true,
             }}
             transition={{ duration: 0.5 }}
@@ -78,7 +78,7 @@ const Revolution = () => {
               variant="link"
               className="text-green-600 p-0 hover:text-green-800 !rounded-button whitespace-nowrap"
             >
-              Learn more <i className="fas fa-arrow-right ml-2"></i>
+              Learn more <ArrowRightIcon />
             </Button>
           </motion.div>
 
@@ -92,7 +92,6 @@ const Revolution = () => {
               y: 0,
             }}
             viewport={{
-        
               once: true,
             }}
             transition={{ duration: 0.5 }}
@@ -110,7 +109,7 @@ const Revolution = () => {
               variant="link"
               className="text-purple-600 p-0 hover:text-purple-800 !rounded-button whitespace-nowrap"
             >
-              Learn more <i className="fas fa-arrow-right ml-2"></i>
+              Learn more <ArrowRightIcon />
             </Button>
           </motion.div>
         </div>
