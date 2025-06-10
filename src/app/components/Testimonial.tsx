@@ -48,7 +48,7 @@ const Testimonial = () => {
              
              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                {testimonials.map((testimonial, index) => (
-                 <Card key={index} className="bg-gradient-to-b from-white to-gray-50 border-amber-100">
+                 <Card key={index} className="bg-gradient-to-b from-white to-gray-50 shadow-sm border border-gray-200">
                    <CardHeader>
                      <div className="flex items-center gap-4">
                        <Avatar>

@@ -23,7 +23,7 @@ const Hero = () => {
           </li>
         </ol>
 
-        <div className="flex gap-4 lg:items-center  max-md:flex-row">
+        <div className="flex gap-4 lg:items-center  max-md:flex-row relative z-0">
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white !rounded-button whitespace-nowrap cursor-pointer">
                 <ShoppingCart className="h-4 w-4 mr-1" />
             Order now
@@ -34,7 +34,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="lg:w-1/2 w-full max-md:pt-30"></div>
-      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-gray-50 to-transparent z-10"></div>
+      <div className="absolute lg:bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-gray-50 to-transparent z-10"></div>
     </div>
   );
 };
