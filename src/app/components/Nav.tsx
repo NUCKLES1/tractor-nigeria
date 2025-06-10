@@ -62,23 +62,23 @@ const Nav = () => {
           </NavigationMenuList>
         </NavigationMenu>
       </div>
-      <nav className="justify-between lg:hidden fixed z-30 mt-8 w-11/12  rounded-md mx-auto text-black flex">
+      <nav className="justify-between lg:hidden fixed z-30 mt-6 w-11/12  rounded-md mx-auto text-black flex">
         <div className="pt-1 text-white font-bold">
           <h1 className="font-bold">
             Tractor <span className="text-green-400">NG</span>
           </h1>
         </div>
         <div>
-                        <button
-              onClick={toggleStyle}
-              className="lg:hidden text-white h-full text-center"
-            >
-              {!isStyled ? (
-                <Menu className="w-6 h-6  transition-all duration-500" />
-              ) : (
-                <X className="w-6 h-6 transition-all duration-500" />
-              )}
-            </button>
+          <button
+            onClick={toggleStyle}
+            className="lg:hidden text-white h-full text-center"
+          >
+            {!isStyled ? (
+              <Menu className="w-6 h-6  transition-all duration-500" />
+            ) : (
+              <X className="w-6 h-6 transition-all duration-500" />
+            )}
+          </button>
         </div>
         <div
           style={{
@@ -88,9 +88,7 @@ const Nav = () => {
             animationDelay: "opacity 2s ease-in-out",
           }}
           className="absolute top-[6vh] right-0 bg-white h-[75vh] p-2 w-[0%] z-50 border overflow-hidden"
-        >
-          
-        </div>
+        ></div>
       </nav>
     </div>
   );
