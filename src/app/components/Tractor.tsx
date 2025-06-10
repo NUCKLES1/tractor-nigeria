@@ -211,7 +211,7 @@ const Tractor = () => {
            <motion.p
             initial={{
               opacity: 0,
-              y: 80,
+              y: 50,
             }}
             whileInView={{
               opacity: 1,
@@ -225,6 +225,7 @@ const Tractor = () => {
             From compact models to heavy-duty powerhouses, find the perfect
             tractor for your agricultural needs.
           </motion.p>
+
         </div>
 
         <Tabs

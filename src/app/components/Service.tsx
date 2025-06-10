@@ -61,7 +61,7 @@ const Service = () => {
           <motion.p
             initial={{
               opacity: 0,
-              y: 80,
+              y: 50,
             }}
             whileInView={{
               opacity: 1,
