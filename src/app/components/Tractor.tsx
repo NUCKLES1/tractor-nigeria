@@ -174,7 +174,7 @@ const Tractor = () => {
                
                <TabsContent value="buy" className="mt-0">
                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                   {tractors.map((tractor, index) => (
+                   {tractors.map((tractor) => (
                      <Card key={tractor.id} className="overflow-hidden transition-all hover:shadow-md border-gray-200">
                        <div className="h-48 -mt-6 overflow-hidden">
                          <img 
@@ -309,7 +309,7 @@ const Tractor = () => {
                
                <TabsContent value="rent" className="mt-0">
                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                   {tractors.map((tractor, index) => (
+                   {tractors.map((tractor) => (
                      <Card key={tractor.id} className="overflow-hidden transition-all hover:shadow-md border-gray-200">
                        <div className="h-48 overflow-hidden">
                          <img 

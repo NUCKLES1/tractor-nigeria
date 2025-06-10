@@ -9,7 +9,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import React, { useState } from 'react'
+import React from 'react'
 
 import {
   Popover,
@@ -17,7 +17,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 
-import { format } from "date-fns";
+{/*import { format } from "date-fns";*/}
 
 const Service = () => {
       {/*const [date, setDate] = useState<Date | undefined>(new Date());*/}
@@ -149,7 +149,7 @@ const Service = () => {
                        <AccordionItem value="item-3">
                          <AccordionTrigger>Mobile Service Options</AccordionTrigger>
                          <AccordionContent>
-                           Can't bring your tractor to us? Our mobile service units come to your location, equipped with all necessary tools and parts to perform repairs and maintenance on-site.
+                           Cant bring your tractor to us? Our mobile service units come to your location, equipped with all necessary tools and parts to perform repairs and maintenance on-site.
                          </AccordionContent>
                        </AccordionItem>
                        <AccordionItem value="item-4">

@@ -36,7 +36,7 @@ const Ourservice = () => {
             Support
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            We're Here To Help
+            We are Here To Help
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Our dedicated support team is available around the clock to assist
@@ -143,7 +143,7 @@ const Ourservice = () => {
                       Advanced AI Features Tutorial
                     </h4>
                     <p className="text-xs text-gray-500">
-                      Maximize your tractor's smart capabilities
+                      Maximize your tractors smart capabilities
                     </p>
                   </div>
                 </div>
