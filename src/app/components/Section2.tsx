@@ -22,7 +22,7 @@ const Section2 = () => {
       <div className="lg:w-1/2 overflow-hidden">
         <Image
           className="dark:invert lg:ml-15 max-md:mt-5 mt-25 h-10/12 object-cover rounded-t-4xl relative"
-          src="/many.jpg"
+          src="/tractors.jpg"
           alt="Next.js logo"
           width={400}
           height={900}
