@@ -4,15 +4,13 @@ import React from "react";
 import {
   NavigationMenu,
   NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 
-import { ShoppingCart, CalendarRange } from "lucide-react";
+import { ShoppingCart } from "lucide-react";
 
 import Link from "next/link";
 

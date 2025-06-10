@@ -2,7 +2,7 @@
 
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { Calendar, CalendarIcon } from 'lucide-react'
+import { CalendarIcon } from 'lucide-react'
 import {
   Accordion,
   AccordionContent,
@@ -20,7 +20,7 @@ import {
 import { format } from "date-fns";
 
 const Service = () => {
-      const [date, setDate] = useState<Date | undefined>(new Date());
+      {/*const [date, setDate] = useState<Date | undefined>(new Date());*/}
 
   return (
       <section id="service" className="py-16 bg-gradient-to-b from-white to-gray-50">
@@ -93,7 +93,7 @@ const Service = () => {
                                className="w-full justify-start text-left font-normal !rounded-button whitespace-nowrap"
                              >
                                <CalendarIcon className="mr-2 h-4 w-4" />
-                               {date ? format(date, "PPP") : <span>Pick a date</span>}
+                               {/*date ? format(date, "PPP") : <span>Pick a date</span>*/}
                              </Button>
                            </PopoverTrigger>
                            <PopoverContent className="w-auto p-0">

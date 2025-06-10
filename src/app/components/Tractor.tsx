@@ -3,9 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import {
   Card,
-  CardAction,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -31,11 +29,9 @@ import { Heart } from 'lucide-react'
 
 const Tractor = () => {
 
-      const [date, setDate] = useState<Date | undefined>(new Date());
       const [rentalDuration, setRentalDuration] = useState([7]);
-      const [showMobileMenu, setShowMobileMenu] = useState(false);
       const [activeTab, setActiveTab] = useState("buy");
-      const [selectedTractor, setSelectedTractor] = useState(0);
+
       const chartRef = useRef<HTMLDivElement>(null);
 
         const tractors = [
@@ -69,28 +65,6 @@ const Tractor = () => {
             image: "https://readdy.ai/api/search-image?query=High-performance%20specialized%20tractor%20with%20advanced%20robotics%2C%20articulated%20arms%2C%20specialized%20equipment%20attachments%2C%20on%20a%20simple%20gradient%20background%2C%20photorealistic%2C%20product%20photography%2C%20clean%20minimal%20background%2C%20high-end%20commercial%20product%20shot&width=600&height=400&seq=tractor4&orientation=landscape",
             description: "Specialized high-performance model for large-scale industrial farming operations.",
             features: ["Robotic Attachments", "Terrain Adaptation", "Climate Control", "Night Vision", "Drone Syncing"]
-          }
-        ];
-      
-        // Testimonials data
-        const testimonials = [
-          {
-            name: "Michael Johnson",
-            role: "Commercial Farmer",
-            avatar: "https://readdy.ai/api/search-image?query=Professional%20male%20farmer%20portrait%2C%20mid%2040s%2C%20confident%20smile%2C%20wearing%20modern%20farming%20attire%2C%20natural%20outdoor%20lighting%2C%20high%20quality%20professional%20headshot&width=100&height=100&seq=avatar1&orientation=squarish",
-            content: "The NeoTrac X9000 has revolutionized our farming operations. The autonomous features save us countless hours, and the AI crop analysis has improved our yield by 30%."
-          },
-          {
-            name: "Sarah Williams",
-            role: "Organic Farm Owner",
-            avatar: "https://readdy.ai/api/search-image?query=Professional%20female%20farmer%20portrait%2C%20early%2030s%2C%20warm%20smile%2C%20wearing%20casual%20modern%20farming%20clothes%2C%20natural%20outdoor%20lighting%2C%20high%20quality%20professional%20headshot&width=100&height=100&seq=avatar2&orientation=squarish",
-            content: "As an organic farmer, I appreciate the EcoTrac's zero emissions and quiet operation. It's gentle on the soil and powerful enough for all our needs."
-          },
-          {
-            name: "David Chen",
-            role: "Agricultural Technologist",
-            avatar: "https://readdy.ai/api/search-image?query=Professional%20Asian%20male%20portrait%2C%20late%2030s%2C%20thoughtful%20expression%2C%20wearing%20smart%20casual%20attire%20with%20tech%20accessories%2C%20indoor%20studio%20lighting%2C%20high%20quality%20professional%20headshot&width=100&height=100&seq=avatar3&orientation=squarish",
-            content: "The data integration capabilities of these tractors are impressive. They seamlessly connect with our farm management software, creating a truly smart farming ecosystem."
           }
         ];
       
@@ -189,7 +163,7 @@ const Tractor = () => {
                </p>
              </div>
              
-             <Tabs defaultValue="buy" className="w-full" onValueChange={setActiveTab}>
+             <Tabs defaultValue="buy" className="w-full" onValueChange={setActiveTab} value={activeTab}>
                <div className="flex justify-center mb-8">
                  <TabsList className="grid w-full max-w-md grid-cols-3">
                    <TabsTrigger value="buy" className="!rounded-button whitespace-nowrap">Buy</TabsTrigger>

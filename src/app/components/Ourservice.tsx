@@ -1,6 +1,5 @@
 import {
   Card,
-  CardAction,
   CardContent,
   CardDescription,
   CardFooter,
@@ -14,8 +13,8 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import React from "react";
 import {
-    CreditCard,
-    Headset,
+  CreditCard,
+  Headset,
   LibraryBig,
   MessageCircle,
   MessageCircleMore,

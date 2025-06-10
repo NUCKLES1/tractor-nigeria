@@ -2,7 +2,6 @@ import { Badge } from '@/components/ui/badge'
 import React from 'react'
 import {
   Card,
-  CardAction,
   CardContent,
   CardDescription,
   CardFooter,
@@ -10,6 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Star } from 'lucide-react'
 
 const Testimonial = () => {
      const testimonials = [
@@ -62,15 +62,15 @@ const Testimonial = () => {
                      </div>
                    </CardHeader>
                    <CardContent>
-                     <p className="text-gray-700">"{testimonial.content}"</p>
+                     <p className="text-gray-700">{testimonial.content}</p>
                    </CardContent>
                    <CardFooter className="border-t border-amber-100 pt-4">
                      <div className="flex text-amber-500">
-                       <i className="fas fa-star"></i>
-                       <i className="fas fa-star"></i>
-                       <i className="fas fa-star"></i>
-                       <i className="fas fa-star"></i>
-                       <i className="fas fa-star"></i>
+                       <Star />
+                       <Star />
+                       <Star />
+                       <Star />
+                       <Star />
                      </div>
                    </CardFooter>
                  </Card>
