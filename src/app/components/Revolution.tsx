@@ -30,7 +30,6 @@ const Revolution = () => {
               y: 0,
             }}
             viewport={{
-              //amount: "all",//
               once: true,
             }}
             transition={{ duration: 0.5 }}
@@ -61,7 +60,7 @@ const Revolution = () => {
               y: 0,
             }}
             viewport={{
-             // amount: "all",
+       
               once: true,
             }}
             transition={{ duration: 0.5 }}
@@ -93,7 +92,7 @@ const Revolution = () => {
               y: 0,
             }}
             viewport={{
-             // amount: "all",
+        
               once: true,
             }}
             transition={{ duration: 0.5 }}
