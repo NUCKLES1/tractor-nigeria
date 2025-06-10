@@ -1,3 +1,5 @@
+"use client"
+
 import { Badge } from '@/components/ui/badge'
 import React from 'react'
 import {
@@ -10,7 +12,8 @@ import {
 } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Star } from 'lucide-react'
-
+import { motion } from "framer-motion"
+ 
 const Testimonial = () => {
      const testimonials = [
     {
@@ -40,15 +43,55 @@ const Testimonial = () => {
                <Badge variant="outline" className="mb-4 px-4 py-1 border-amber-200 text-amber-700 bg-gradient-to-b from-white to-gray-50">
                  Testimonials
                </Badge>
-               <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Customers Say</h2>
-               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+               <motion.h2
+            initial={{
+              opacity: 0,
+              y: 80,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{
+              //amount: "all",//
+              once: true,
+            }}
+            transition={{ duration: 0.5 }} className="text-3xl md:text-4xl font-bold mb-4">What Our Customers Say</motion.h2>
+               <motion.p
+                          initial={{
+                            opacity: 0,
+                            y: 80,
+                          }}
+                          whileInView={{
+                            opacity: 1,
+                            y: 0,
+                          }}
+                          viewport={{
+                            //amount: "all",//
+                            once: true,
+                          }}
+                          transition={{ duration: 0.5 }} className="text-lg text-gray-600 max-w-3xl mx-auto">
                  Hear from farmers who have transformed their operations with our next-generation tractors.
-               </p>
+               </motion.p>
              </div>
              
              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                {testimonials.map((testimonial, index) => (
                  <Card key={index} className="bg-gradient-to-b from-white to-gray-50 shadow-sm border border-gray-200">
+                    <motion.div
+                               initial={{
+                                 opacity: 0,
+                                 y: 80,
+                               }}
+                               whileInView={{
+                                 opacity: 1,
+                                 y: 0,
+                               }}
+                               viewport={{
+                                 //amount: "all",//
+                                 once: true,
+                               }}
+                               transition={{ duration: 0.5 }}>
                    <CardHeader>
                      <div className="flex items-center gap-4">
                        <Avatar>
@@ -73,6 +116,7 @@ const Testimonial = () => {
                        <Star />
                      </div>
                    </CardFooter>
+                   </motion.div>
                  </Card>
                ))}
              </div>

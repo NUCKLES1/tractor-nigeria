@@ -16,6 +16,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { motion } from "framer-motion";
 
 {
   /*import { format } from "date-fns";*/
@@ -32,25 +33,70 @@ const Service = () => {
       className="py-16 bg-gradient-to-b from-white to-gray-50"
     >
       <div className="container mx-auto">
-        <div className="text-center px-2 mb-12">
+        <div className="text-center overflow-hidden px-2 mb-12">
           <Badge
             variant="outline"
             className="mb-4 px-4 py-1 border-purple-200 text-purple-700 bg-purple-50"
           >
             Services
           </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <motion.h2
+            initial={{
+              opacity: 0,
+              y: 80,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{
+              //amount: "all",//
+              once: true,
+            }}
+            transition={{ duration: 0.5 }}
+            className="text-3xl md:text-4xl font-bold mb-4"
+          >
             Schedule Tractor Service & Repairs
-          </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          </motion.h2>
+          <motion.p
+            initial={{
+              opacity: 0,
+              y: 80,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{
+              //amount: "all",//
+              once: true,
+            }}
+            transition={{ duration: 0.5 }}
+            className="text-lg text-gray-600 max-w-3xl mx-auto"
+          >
             Keep your equipment running at peak performance with our
             professional maintenance and repair services.
-          </p>
+          </motion.p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           <div>
-            <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 80,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{
+                //amount: "all",//
+                once: true,
+              }}
+              transition={{ duration: 0.5 }}
+              className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden"
+            >
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-4">Service Appointment</h3>
                 <div className="space-y-4">
@@ -164,11 +210,26 @@ const Service = () => {
                   </Button>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
 
           <div>
-            <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden h-full">
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 80,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{
+                //amount: "all",//
+                once: true,
+              }}
+              transition={{ duration: 0.5 }}
+              className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden h-full"
+            >
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-4">Service Benefits</h3>
 
@@ -229,7 +290,7 @@ const Service = () => {
                   </Button>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
