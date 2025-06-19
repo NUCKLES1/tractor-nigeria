@@ -30,7 +30,7 @@ const Service = () => {
   return (
     <section
       id="service"
-      className="py-16 bg-gradient-to-b from-white to-gray-50"
+      className="py-16 bg-black"
     >
       <div className="container mx-auto">
         <div className="text-center overflow-hidden px-2 mb-12">
@@ -54,7 +54,7 @@ const Service = () => {
               once: true,
             }}
             transition={{ duration: 0.5 }}
-            className="text-3xl md:text-4xl font-bold mb-4"
+            className="text-3xl md:text-4xl font-bold mb-4 text-white"
           >
             Schedule Tractor Service & Repairs
           </motion.h2>
@@ -72,7 +72,7 @@ const Service = () => {
               once: true,
             }}
             transition={{ duration: 0.5 }}
-            className="text-lg text-gray-600 max-w-3xl mx-auto"
+            className="text-lg text-gray-300 max-w-3xl mx-auto"
           >
             Keep your equipment running at peak performance with our
             professional maintenance and repair services.

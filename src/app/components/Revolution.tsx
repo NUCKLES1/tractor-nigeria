@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const Revolution = () => {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-black">
       <div className="container mx-auto lg:px-4">
         <div className="text-center mb-12">
           <motion.h2
@@ -23,7 +23,7 @@ const Revolution = () => {
               once: true,
             }}
             transition={{ duration: 0.5 }}
-            className="text-3xl md:text-4xl font-bold mb-4"
+            className="text-3xl md:text-4xl font-bold mb-4 text-white"
           >
             Revolutionize Your Farming
           </motion.h2>
@@ -40,7 +40,7 @@ const Revolution = () => {
               once: true,
             }}
             transition={{ duration: 0.5 }}
-            className="text-lg text-gray-600 max-w-3xl mx-auto"
+            className="text-lg text-gray-300 max-w-3xl mx-auto"
           >
             Our next-generation tractors combine cutting-edge technology with
             sustainable practices to transform agricultural operations.

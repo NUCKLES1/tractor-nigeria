@@ -52,7 +52,7 @@ const Hero = () => {
           </Button>
         </div>
       </div>
-      <div className="absolute max-md:mt-20 lg:bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-gray-50 to-transparent z-10"></div>
+      <div className="absolute max-md:mt-30 lg:bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black to-transparent z-10"></div>
     </div>
   );
 };

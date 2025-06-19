@@ -29,7 +29,7 @@ import {
 
 const Ourservice = () => {
   return (
-    <section id="support" className="py-16 bg-white">
+    <section id="support" className="py-16 bg-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <Badge
@@ -52,7 +52,7 @@ const Ourservice = () => {
               once: true,
             }}
             transition={{ duration: 0.5 }}
-            className="text-3xl md:text-4xl font-bold mb-4"
+            className="text-3xl md:text-4xl font-bold mb-4 text-white"
           >
             We are Here To Help
           </motion.h2>
@@ -70,7 +70,7 @@ const Ourservice = () => {
               once: true,
             }}
             transition={{ duration: 0.5 }}
-            className="text-lg text-gray-600 max-w-3xl mx-auto"
+            className="text-lg text-gray-300 max-w-3xl mx-auto"
           >
             Our dedicated support team is available around the clock to assist
             with any questions or issues.

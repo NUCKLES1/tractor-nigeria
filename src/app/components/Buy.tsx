@@ -26,8 +26,9 @@ import * as echarts from "echarts";
 import { Slider } from "@/components/ui/slider";
 import { Heart } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
-const Tractor = () => {
+const Buy = () => {
   const [rentalDuration, setRentalDuration] = useState([7]);
   const [activeTab, setActiveTab] = useState("buy");
 
@@ -184,7 +185,10 @@ const Tractor = () => {
     }
   }, []);
   return (
-    <section id="buy" className="py-16 bg-black">
+    <section id="buy" className="py-16 bg-gradient-to-b from-gray-50 to-white">
+                <div className="h-1/4">
+         <Image src="" width={50} height={50} alt=""/>    
+        </div>
       <div className="container mx-auto lg:px-4">
         <div className="text-center mb-12 overflow-hidden">
           <Badge className="mb-4 px-4 py-1 border-blue-200 text-blue-700 bg-blue-50">
@@ -204,7 +208,7 @@ const Tractor = () => {
               once: true,
             }}
             transition={{ duration: 0.5 }}
-            className="text-3xl md:text-4xl font-bold mb-4 text-white"
+            className="text-3xl md:text-4xl font-bold mb-4"
           >
             Explore Our Cutting-Edge Tractors
           </motion.h2>
@@ -221,7 +225,7 @@ const Tractor = () => {
               //amount: "all",//
               once: true,
             }}
-            transition={{ duration: 0.5 }} className="text-lg text-gray-300 max-w-3xl mx-auto">
+            transition={{ duration: 0.5 }} className="text-lg text-gray-600 max-w-3xl mx-auto">
             From compact models to heavy-duty powerhouses, find the perfect
             tractor for your agricultural needs.
           </motion.p>
@@ -633,8 +637,201 @@ const Tractor = () => {
           </TabsContent>
         </Tabs>
       </div>
-    </section>
-  );
-};
+        <TabsContent value="buy" className="mt-0">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {tractors.map((tractor) => (
+                <Card
+                  key={tractor.id}
+                  className="overflow-hidden transition-all hover:shadow-md border-gray-200"
+                >
+                  <div className="h-48 -mt-6 overflow-hidden">
+                    <img
+                      src={tractor.image}
+                      alt={tractor.name}
+                      className="w-full h-full object-cover object-top transition-transform hover:scale-105"
+                    />
+                  </div>
+                  <CardHeader className="pb-2">
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <Badge className="mb-2 bg-blue-100 text-blue-800 hover:bg-blue-200 border-none">
+                          {tractor.category}
+                        </Badge>
+                        <CardTitle className="text-xl">
+                          {tractor.name}
+                        </CardTitle>
+                      </div>
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        className="text-gray-500 hover:text-blue-600 !rounded-button whitespace-nowrap"
+                      >
+                        <Heart />
+                      </Button>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="pb-2 -mt-4">
+                    <p className="text-gray-600 text-sm mb-4">
+                      {tractor.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {tractor.features.slice(0, 3).map((feature, i) => (
+                        <Badge key={i} className="bg-gray-50 text-gray-600">
+                          {feature}
+                        </Badge>
+                      ))}
+                      {tractor.features.length > 3 && (
+                        <Badge className="bg-gray-50 text-gray-600">
+                          +{tractor.features.length - 3} more
+                        </Badge>
+                      )}
+                    </div>
+                    <div className="text-2xl font-bold text-blue-700">
+                      ${tractor.price.toLocaleString()}
+                    </div>
+                  </CardContent>
+                  <CardFooter className="flex -mt-4 gap-2">
+                    <Button className="flex-1 bg-blue-600 hover:bg-blue-700 !rounded-button whitespace-nowrap">
+                      <i className="fas fa-shopping-cart mr-2"></i> Buy Now
+                    </Button>
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button
+                          variant="outline"
+                          size="icon"
+                          className="!rounded-button whitespace-nowrap"
+                        >
+                          <i className="fas fa-eye"></i>
+                        </Button>
+                      </DialogTrigger>
+                      <DialogContent className="sm:max-w-[900px]">
+                        <DialogHeader>
+                          <DialogTitle>{tractor.name}</DialogTitle>
+                          <DialogDescription>
+                            {tractor.category} - Advanced Agricultural
+                            Technology
+                          </DialogDescription>
+                        </DialogHeader>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-4">
+                          <div className="rounded-lg overflow-hidden">
+                            <img
+                              src={tractor.image}
+                              alt={tractor.name}
+                              className="w-full h-auto"
+                            />
+                            <div className="flex justify-center mt-4 gap-2">
+                              <Button
+                                variant="outline"
+                                size="sm"
+                                className="!rounded-button whitespace-nowrap"
+                              >
+                                <i className="fas fa-cube mr-2"></i> View 3D
+                                Model
+                              </Button>
+                              <Button
+                                variant="outline"
+                                size="sm"
+                                className="!rounded-button whitespace-nowrap"
+                              >
+                                <i className="fas fa-vr-cardboard mr-2"></i> VR
+                                Tour
+                              </Button>
+                            </div>
+                          </div>
+                          <div>
+                            <h3 className="text-lg font-semibold mb-2">
+                              Specifications
+                            </h3>
+                            <div className="space-y-4">
+                              <div>
+                                <h4 className="text-sm font-medium text-gray-500">
+                                  Engine
+                                </h4>
+                                <p className="text-sm">
+                                  Advanced Hybrid PowerTrain with Electric Boost
+                                </p>
+                              </div>
+                              <div>
+                                <h4 className="text-sm font-medium text-gray-500">
+                                  Power Output
+                                </h4>
+                                <p className="text-sm">
+                                  450 HP with 30% Energy Recovery
+                                </p>
+                              </div>
+                              <div>
+                                <h4 className="text-sm font-medium text-gray-500">
+                                  Smart Features
+                                </h4>
+                                <p className="text-sm">
+                                  AI Crop Analysis, Autonomous Navigation,
+                                  Remote Control
+                                </p>
+                              </div>
+                              <div>
+                                <h4 className="text-sm font-medium text-gray-500">
+                                  Connectivity
+                                </h4>
+                                <p className="text-sm">
+                                  5G-enabled Farm Management System Integration
+                                </p>
+                              </div>
+                              <div>
+                                <h4 className="text-sm font-medium text-gray-500">
+                                  Warranty
+                                </h4>
+                                <p className="text-sm">
+                                  5-Year Comprehensive with 24/7 Tech Support
+                                </p>
+                              </div>
+                            </div>
 
-export default Tractor;
+                            <div className="mt-6">
+                              <h3 className="text-lg font-semibold mb-2">
+                                Features
+                              </h3>
+                              <ul className="grid grid-cols-2 gap-2">
+                                {tractor.features.map((feature, i) => (
+                                  <li
+                                    key={i}
+                                    className="flex items-center text-sm"
+                                  >
+                                    <i className="fas fa-check text-green-500 mr-2"></i>
+                                    {feature}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+
+                            <div className="mt-6">
+                              <div className="text-2xl font-bold text-blue-700 mb-4">
+                                ${tractor.price.toLocaleString()}
+                              </div>
+                              <div className="flex gap-2">
+                                <Button className="flex-1 bg-blue-600 hover:bg-blue-700 !rounded-button whitespace-nowrap">
+                                  <i className="fas fa-shopping-cart mr-2"></i>{" "}
+                                  Buy Now
+                                </Button>
+                                <Button
+                                  variant="outline"
+                                  className="flex-1 !rounded-button whitespace-nowrap"
+                                >
+                                  <i className="fas fa-calendar-alt mr-2"></i>{" "}
+                                  Rent
+                                </Button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </DialogContent>
+                    </Dialog>
+                  </CardFooter>
+                </Card>
+              ))}
+            </div>
+          </TabsContent>
+    </section>
+  )
+}
+
+export default Buy

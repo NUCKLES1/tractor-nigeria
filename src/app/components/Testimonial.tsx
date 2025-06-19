@@ -37,7 +37,7 @@ const Testimonial = () => {
   ];
 
   return (
-     <section className="py-16 bg-white">
+     <section className="py-16 bg-black">
            <div className="container mx-auto px-4">
              <div className="text-center mb-12">
                <Badge variant="outline" className="mb-4 px-4 py-1 border-amber-200 text-amber-700 bg-gradient-to-b from-white to-gray-50">
@@ -56,7 +56,7 @@ const Testimonial = () => {
               //amount: "all",//
               once: true,
             }}
-            transition={{ duration: 0.5 }} className="text-3xl md:text-4xl font-bold mb-4">What Our Customers Say</motion.h2>
+            transition={{ duration: 0.5 }} className="text-3xl md:text-4xl font-bold mb-4 text-white">What Our Customers Say</motion.h2>
                <motion.p
                           initial={{
                             opacity: 0,
@@ -70,7 +70,7 @@ const Testimonial = () => {
                             //amount: "all",//
                             once: true,
                           }}
-                          transition={{ duration: 0.5 }} className="text-lg text-gray-600 max-w-3xl mx-auto">
+                          transition={{ duration: 0.5 }} className="text-lg text-gray-300 max-w-3xl mx-auto">
                  Hear from farmers who have transformed their operations with our next-generation tractors.
                </motion.p>
              </div>

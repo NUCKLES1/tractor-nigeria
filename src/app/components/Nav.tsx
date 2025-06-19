@@ -23,9 +23,9 @@ const Nav = () => {
 
   return (
     <div className="w-full">
-      <div className="justify-between max-md:hidden fixed z-30 lg:-mt-12 w-[87.5%] bg-[#ffffffab] rounded-md px-4 mx-auto text-black p-1 flex">
-        <div className="pt-1 text-[#03a77e] font-bold">
-          <p>Tractor NG</p>
+      <div className="justify-between max-md:hidden fixed z-30 lg:mt-10 ml-18 w-[87.5%] bg-[#ffffffab] rounded-md px-4 mx-auto text-black p-1 flex">
+        <div className="pt-1 text-[#03a77e] pa font-extrabold">
+          <h1>Tractor NG</h1>
         </div>
         <NavigationMenu>
           <NavigationMenuList>
@@ -62,7 +62,7 @@ const Nav = () => {
           </NavigationMenuList>
         </NavigationMenu>
       </div>
-      <nav className="justify-between lg:hidden fixed z-30 mt-6 w-11/12  rounded-md mx-auto text-black flex">
+      <nav className="justify-between lg:hidden fixed z-30 mt-6 w-11/12  rounded-md ml-4 mx-auto text-black flex">
         <div className="pt-1 text-white font-bold">
           <h1 className="font-bold">
             Tractor <span className="text-green-400">NG</span>
@@ -80,6 +80,7 @@ const Nav = () => {
             )}
           </button>
         </div>
+      
         <div
           style={{
             width: isStyled ? "100%" : "0",
@@ -90,6 +91,7 @@ const Nav = () => {
           className="absolute top-[6vh] right-0 bg-white h-[75vh] p-2 w-[0%] z-50 border overflow-hidden"
         ></div>
       </nav>
+      
     </div>
   );
 };
